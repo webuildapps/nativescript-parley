@@ -1,0 +1,9 @@
+repositories {
+    google()
+    maven { url 'https://nexus.webuildapps.com/' }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'com.webuildapps.tracebuzz:parleylib:2.0.34'
+}

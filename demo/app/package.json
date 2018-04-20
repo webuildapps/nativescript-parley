@@ -1,0 +1,23 @@
+{
+  "name": "nativescript-parley-demo",
+  "description": "Demo app for the NativeScript Parley library.",
+  "homepage": "https://www.irischat.com/",
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+
+  "authors": [
+    {
+      "name": "Stefan Jongejan",
+      "email": "s.jongejan@webuildapps.com"
+    },
+    {
+      "name": "Alex Kok",
+      "email": "a.kok@webuildapps.com"
+    }
+  ],
+
+  "main": "app.js",
+  "android": {
+    "v8Flags": "--expose_gc"
+  }
+}

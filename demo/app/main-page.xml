@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:Parley="nativescript-parley" loaded="pageLoaded" class="page">
+    <Page.actionBar>
+        <ActionBar title="Parley Chat" backgroundColor="#5f6d8f" color="#ffffff" />
+    </Page.actionBar>
+
+    <StackLayout class="p-20" verticalAlignment="center">
+        <ActivityIndicator row="1" visibility="{{ loading ? 'visible' : 'collapsed' }}" busy="true" width="100" height="100"/>
+        <Parley:ParleyView id="parleyView" visibility="{{ loading ? 'collapsed' : 'visible' }}" width="100%" height="100%"/>
+    </StackLayout>
+</Page>

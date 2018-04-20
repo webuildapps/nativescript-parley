@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <domain-config>
+
+        <domain includeSubdomains="false">www.irischat.com</domain>
+
+        <pin-set expiration="2018-05-31">
+            <pin digest="SHA-256">N9YyJf13LbHgGv1kn9/YEXGFLJbleikrcpDORa896ok=</pin>
+            <pin digest="SHA-256">aR6DUqN8qK4HQGhBpcDLVnkRAvOHH1behpQUU1Xl7fE=</pin>
+        </pin-set>
+
+    </domain-config>
+
+</network-security-config>

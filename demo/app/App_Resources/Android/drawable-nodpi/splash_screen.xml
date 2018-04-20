@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="fill">
+    <item>
+        <color android:color="#ffffff" />
+    </item>
+    <item>
+        <bitmap android:gravity="fill" android:src="@drawable/activity_splash_background" />
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/activity_splash_logo" />
+    </item>
+</layer-list>
