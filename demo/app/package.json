@@ -3,8 +3,7 @@
   "description": "Demo app for the NativeScript Parley library.",
   "homepage": "https://www.irischat.com/",
   "license": "Apache-2.0",
-  "version": "0.1.0",
-
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Stefan Jongejan",
@@ -15,7 +14,6 @@
       "email": "a.kok@webuildapps.com"
     }
   ],
-
   "main": "app.js",
   "android": {
     "v8Flags": "--expose_gc"
