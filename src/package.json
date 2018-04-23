@@ -2,9 +2,7 @@
   "name": "nativescript-parley",
   "description": "NativeScript plugin for Parley messaging.",
   "homepage": "https://www.parley.nu/",
-  "readmeFilename": "README.md",
-  "license": "Apache-2.0",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "authors": [
     {
       "name": "Stefan Jongejan",
@@ -15,6 +13,12 @@
       "email": "a.kok@webuildapps.com"
     }
   ],
+  "license": "Apache-2.0",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webuildapps/nativescript-parley.git"
+  },
   "main": "parley",
   "typings": "parley.d.ts",
   "nativescript": {
