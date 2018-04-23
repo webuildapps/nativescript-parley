@@ -42,7 +42,7 @@ export class Parley extends ParleyBase {
     }
 
     configure(): void {
-        if (Parley.getInstance().getSslPinningListener()) {
+        if (!Parley.getInstance().getSslPinningListener()) {
             ParleyNative.getInstance().configure(app.android.context);
         }
     }
