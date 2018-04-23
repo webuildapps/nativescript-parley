@@ -2,8 +2,9 @@
   "name": "nativescript-parley",
   "description": "NativeScript plugin for Parley messaging.",
   "homepage": "https://www.parley.nu/",
+  "readmeFilename": "README.md",
   "license": "Apache-2.0",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "authors": [
     {
       "name": "Stefan Jongejan",
