@@ -1,9 +1,9 @@
 {
   "name": "nativescript-parley",
-  "description": "NativeScript library for Parley messaging.",
-  "homepage": "https://www.irischat.com/",
+  "description": "NativeScript plugin for Parley messaging.",
+  "homepage": "https://www.parley.nu/",
   "license": "Apache-2.0",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     {
       "name": "Stefan Jongejan",
