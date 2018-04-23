@@ -3,7 +3,7 @@
   "description": "NativeScript library for Parley messaging.",
   "homepage": "https://www.irischat.com/",
   "license": "Apache-2.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "name": "Stefan Jongejan",
