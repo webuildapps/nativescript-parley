@@ -26,3 +26,4 @@ demo/report/report.html
 demo/report/stats.json
 
 !demo/hooks/before-prepare/remove-firebase-podfile.js
+src/platforms/android/nativescript_parley.aar
