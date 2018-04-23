@@ -1,24 +1,7 @@
 {
   "name": "nativescript-parley",
+  "version": "1.0.8",
   "description": "NativeScript plugin for Parley messaging.",
-  "homepage": "https://www.parley.nu/",
-  "version": "1.0.7",
-  "authors": [
-    {
-      "name": "Stefan Jongejan",
-      "email": "s.jongejan@webuildapps.com"
-    },
-    {
-      "name": "Alex Kok",
-      "email": "a.kok@webuildapps.com"
-    }
-  ],
-  "license": "Apache-2.0",
-  "readmeFilename": "README.md",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/webuildapps/nativescript-parley.git"
-  },
   "main": "parley",
   "typings": "parley.d.ts",
   "nativescript": {
@@ -34,6 +17,31 @@
       }
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webuildapps/nativescript-parley.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "Parley",
+    "Chat"
+  ],
+  "authors": [
+    {
+      "name": "Stefan Jongejan",
+      "email": "s.jongejan@webuildapps.com"
+    },
+    {
+      "name": "Alex Kok",
+      "email": "a.kok@webuildapps.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/webuildapps/nativescript-parley/issues"
+  },
+  "homepage": "https://github.com/webuildapps/nativescript-parley",
+  "readmeFilename": "README.md",
   "scripts": {
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js",
