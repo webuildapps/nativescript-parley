@@ -1,6 +1,7 @@
 .vscode
 .idea
 .DS_Store
+package-lock.json
 *.js
 !postinstall.js
 !preuninstall.js
