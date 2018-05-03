@@ -65,7 +65,7 @@ export class ParleyView extends ParleyViewBase {
     public nativeView: UIView;
 
     createNativeView(): Object {
-        this.nativeView = UIView.alloc().init();
+        this.nativeView = UIView.new();
         this.nativeView.clipsToBounds = true;
 
         IrisChatLib.sharedInstance().delegate = new ParleyLibDelegate();
@@ -74,14 +74,15 @@ export class ParleyView extends ParleyViewBase {
     }
 
     showChat(): void {
-        let rootViewController = topmost().currentPage && topmost().currentPage.ios;
-
-        let navigationViewController = ICChatViewController.alloc().init();
-        navigationViewController.rootViewController = rootViewController;
+        let navigationViewController = ICChatViewController.new();
+        navigationViewController.rootViewController = topmost().ios.controller;
         navigationViewController.view.frame = this.nativeView.frame;
 
-        rootViewController.addChildViewController(navigationViewController);
+        let parentViewController = this.page.viewController;
+
+        parentViewController.addChildViewController(navigationViewController);
         this.nativeView.addSubview(navigationViewController.view);
+        navigationViewController.didMoveToParentViewController(parentViewController);
     }
 }
 
