@@ -10,6 +10,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 ### V1.0.0 (23 april 2018)
  * PARLEY-179 Release on GitHub and npm.
 
+### V1.0.12 (15 mei 2018)
+ * PARLEY-187 Disabled tool- and navigationbar manipulation.
+
 ## Getting started
 The plugin offers a singleton called `Parley` and a view called `ParleyView`. The `Parley` singleton is the connection between your application and the plugin. The `ParleyView` represent a native Android and iOS view.
 
@@ -367,7 +370,6 @@ Parley.init(this, "0W4qcE5aXoKq9OzvHxj2");
 Parley.getInstance().registerUser("ZGFhbnw5ZTA5ZjQ2NWMyMGNjYThiYjMxNzZiYjBhOTZmZDNhNWY0YzVlZjYzMGVhNGZmMWUwMjFjZmE0NTEyYjlmMDQwYTJkMTJmNTQwYTE1YmUwYWU2YTZjNTc4NjNjN2IxMmRjODNhNmU1ODNhODhkMmQwNzY2MGYxZTEzZDVhNDk1Mnw1ZDcwZjM5ZTFlZWE5MTM2YmM3MmIwMzk4ZDcyZjEwNDJkNzUwOTBmZmJjNDM3OTg5ZWU1MzE5MzdlZDlkYmFmNTU1YTcyNTUyZWEyNjllYmI5Yzg5ZDgyZGQ3MDYwYTRjZGYxMzE3NWJkNTUwOGRhZDRmMDA1MTEzNjlkYjkxNQ"); // Optional -- Read the user registration custom configuration!
 Parley.getInstance().setBaseUrl("https://www.irischat.com"); // Optional
 Parley.getInstance().setBasePath("/clientApi/v1.1/"); // Optional
-Parley.getInstance().setOfflineMessagingEnabled(false); // Optional
 Parley.getInstance().enableSslPinning(this , "N9YyJf13LbHgGv1kn9/YEXGFLJbleikrcpDORa896ok=", "aR6DUqN8qK4HQGhBpcDLVnkRAvOHH1behpQUU1Xl7fE="); // Optional -- Read the SSL pinning custom configuration!
 Parley.getInstance().configure();
 ```

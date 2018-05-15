@@ -45,6 +45,8 @@ declare class IrisChatLib extends NSObject {
 
 	offlineMessagingEnabled: boolean;
 
+	toolbarEnabled: boolean;
+
 	pinningType: SSL_PINNING_TYPE;
 
 	sslPublicKeyError: string;

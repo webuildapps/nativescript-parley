@@ -2,4 +2,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 source 'https://webuildapps@bitbucket.org/webuildapps/wba_cocoapod_spec_repo.git'
 
 use_frameworks!
-pod 'IrisChatLibrary', '1.2.23'
+pod 'IrisChatLibrary', '1.2.25'

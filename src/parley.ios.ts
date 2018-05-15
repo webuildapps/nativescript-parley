@@ -29,6 +29,8 @@ export class Parley extends ParleyBase {
     }
 
     configure(): void {
+        IrisChatLib.sharedInstance().toolbarEnabled = false;
+
         let sslPinningMethod = (this.sslPinningPublicKeyOne != null || this.sslPinningPublicKeyTwo != null) ? SSL_PINNING_TYPE.PUBLIC_KEY : SSL_PINNING_TYPE.NONE;
         IrisChatLib.initIrisChatLibraryWithSecretRootViewControllerAndBaseURLAndSLLPinningAndSSLPublicKeyOneAndSSLPublicKeyTwoAndSSLPublicError(
             this.appSecret,

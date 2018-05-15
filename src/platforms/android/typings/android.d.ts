@@ -23,6 +23,7 @@ declare module com {
                 public registerUser(param0: string, param1: java.util.Map<String, String>): void;
                 public unRegisterUser(param0: string): void;
                 public handlePushMessageSilent(param0: java.util.Map<String, String>): void;
+                public setToolbarEnabled(param0: boolean): void;
             }
             export module Parley {
                 export class ParleyListener {
