@@ -32,7 +32,7 @@ export class Parley extends ParleyBase {
         console.log("ParleyAndroid.init", listener, appSecret);
 
         ParleyNative.init(app.android.context, parleyNativeListener, appSecret, true);
-        ParleyNative.getInstance().setToolbarEnabled(false);
+        ParleyNative.getInstance().setToolbarEnabled(new java.lang.Boolean(false));
     }
 
     enableSslPinning(listener: ParleySslPinningListener, publicKeyOne: string, publicKeyTwo: string): void {
