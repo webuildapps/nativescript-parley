@@ -10,14 +10,6 @@ declare module com {
     }
 }
 
-declare module java {
-    export module lang {
-        export class Boolean {
-            public constructor(param0: boolean);
-        }
-    }
-}
-
 declare module com {
     export module webuildapps {
         export module parleylib {
