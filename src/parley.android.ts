@@ -12,6 +12,7 @@ import LayoutParams = android.widget.FrameLayout.LayoutParams;
 import View = android.view.View;
 import FragmentManager = android.support.v4.app.FragmentManager;
 import FragmentTransaction = android.support.v4.app.FragmentTransaction;
+import Fragment = android.support.v4.app.Fragment;
 import ChatFragment = com.webuildapps.parleylib.ui.fragment.ChatFragment;
 
 export class Parley extends ParleyBase {
@@ -92,8 +93,8 @@ export class ParleyView extends ParleyViewBase {
     showChat(): void {
         let fragmentManager: FragmentManager = this._context.getSupportFragmentManager();
         let fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(this.layoutId, new ChatFragment())
-        .commit();
+        fragmentTransaction.replace(this.layoutId, new ChatFragment() as Fragment)
+            .commit();
     }
 }
 
