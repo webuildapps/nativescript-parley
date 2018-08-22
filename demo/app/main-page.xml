@@ -5,6 +5,6 @@
 
     <StackLayout class="p-20" verticalAlignment="center">
         <ActivityIndicator row="1" visibility="{{ loading ? 'visible' : 'collapsed' }}" busy="true" width="100" height="100"/>
-        <Parley:ParleyView id="parleyView" visibility="{{ loading ? 'collapsed' : 'visible' }}" width="100%" height="100%"/>
+        <Parley:ParleyView id="parleyView" visibility="{{ loading ? 'collapsed' : 'visible' }}" width="100%" height="100%" style="background: linear-gradient(180deg, blue, white);"/>
     </StackLayout>
 </Page>

@@ -7,11 +7,16 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+
+### V1.0.15 (21 august 2018)
+ * PARLEY-202 Supporting transparent background
+ * PARLEY-202 Added gradient background in the demo app
+
+### V1.0.12 (15 may 2018)
+ * PARLEY-187 Disabled tool- and navigationbar manipulation.
+ 
 ### V1.0.0 (23 april 2018)
  * PARLEY-179 Release on GitHub and npm.
-
-### V1.0.12 (15 mei 2018)
- * PARLEY-187 Disabled tool- and navigationbar manipulation.
 
 ## Getting started
 The plugin offers a singleton called `Parley` and a view called `ParleyView`. The `Parley` singleton is the connection between your application and the plugin. The `ParleyView` represent a native Android and iOS view.

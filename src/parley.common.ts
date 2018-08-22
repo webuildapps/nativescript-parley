@@ -3,8 +3,10 @@ import {View} from "tns-core-modules/ui/core/view";
 
 export abstract class ParleyBase implements Parley {
 
+    public static DEFAULT_BASE_URL = 'https://www.irischat.com';
+
     protected deviceToken: string;
-    protected baseUrl = 'https://www.irischat.com';
+    protected baseUrl = ParleyBase.DEFAULT_BASE_URL;
     protected basePath = '/clientApi/v1.1/';
     protected offlineMessagingEnabled = false;
 

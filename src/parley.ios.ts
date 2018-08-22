@@ -31,16 +31,18 @@ export class Parley extends ParleyBase {
     configure(): void {
         IrisChatLib.sharedInstance().toolbarEnabled = false;
 
-        let sslPinningMethod = (this.sslPinningPublicKeyOne != null || this.sslPinningPublicKeyTwo != null) ? SSL_PINNING_TYPE.PUBLIC_KEY : SSL_PINNING_TYPE.NONE;
-        IrisChatLib.initIrisChatLibraryWithSecretRootViewControllerAndBaseURLAndSLLPinningAndSSLPublicKeyOneAndSSLPublicKeyTwoAndSSLPublicError(
-            this.appSecret,
-            topmost().ios.controller,
-            this.baseUrl,
-            sslPinningMethod,
-            this.sslPinningPublicKeyOne,
-            this.sslPinningPublicKeyTwo,
-            "Unsafe connection detected, the chat will be closed."
-        );
+        if (this.sslPinningPublicKeyOne && this.sslPinningPublicKeyTwo) {
+            IrisChatLib.initIrisChatLibraryWithSecretAndBaseUrlAndSslPinningKeyOneAndSslPinningKeyTwoAndSsLPinningErrorMessage(
+                this.appSecret,
+                this.baseUrl,
+                this.sslPinningPublicKeyOne,
+                this.sslPinningPublicKeyTwo,
+                "Unsafe connection detected, the chat will be closed."
+            );
+        } else {
+            // Also support not providing baseurl and pinning
+            IrisChatLib.initIrisChatLibraryWithSecret(this.appSecret);
+        }
     }
 
     registerDevice(): void {
@@ -77,7 +79,6 @@ export class ParleyView extends ParleyViewBase {
 
     showChat(): void {
         let navigationViewController = ICChatViewController.new();
-        navigationViewController.rootViewController = topmost().ios.controller;
         navigationViewController.view.frame = this.nativeView.frame;
 
         let parentViewController = this.page.viewController;
