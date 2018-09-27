@@ -8,6 +8,8 @@ export declare class Parley {
 
     setBaseUrl(baseUrl: string): void;
     setBasePath(basePath: string): void;
+    addHttpHeader(name: string, value: string): void;
+    removeHttpHeader(name: string): void;
     enableSslPinning(listener: ParleySslPinningListener, publicKeyOne: string, publicKeyTwo: string): void;
     setDeviceToken(deviceToken: string): void;
     configure(): void;

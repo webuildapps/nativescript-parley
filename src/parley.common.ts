@@ -30,6 +30,10 @@ export abstract class ParleyBase implements Parley {
         this.deviceToken = formattedDeviceToken;
     }
 
+    abstract addHttpHeader(name: string, value: string): void;
+
+    abstract removeHttpHeader(name: string);
+
     abstract enableSslPinning(listener: ParleySslPinningListener, publicKeyOne: string, publicKeyTwo: string): void;
 
     abstract configure(): void;

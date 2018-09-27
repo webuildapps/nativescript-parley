@@ -5,5 +5,5 @@ repositories {
 }
 
 dependencies {
-    compile 'com.webuildapps.tracebuzz:parleylib:2.0.37'
+    compile 'com.webuildapps.tracebuzz:parleylib:2.0.38'
 }

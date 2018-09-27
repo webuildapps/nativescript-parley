@@ -1,13 +1,13 @@
 import {ParleyBase, ParleyViewBase} from "./parley.common";
 import {ParleyListener, ParleySslPinningListener} from "./parley";
-import {topmost} from "tns-core-modules/ui/frame";
 
 export class Parley extends ParleyBase {
 
     private static instance: Parley;
+    private appSecret: string;
     private sslPinningPublicKeyOne: string;
     private sslPinningPublicKeyTwo: string;
-    private appSecret: string;
+    private httpHeaders = NSMutableDictionary.dictionary();
 
     static getInstance(): Parley {
         if (!Parley.instance) {
@@ -22,6 +22,16 @@ export class Parley extends ParleyBase {
         Parley.getInstance().setListener(listener);
     }
 
+    addHttpHeader(name: string, value: string): void {
+        this.httpHeaders.setValueForKey(value, name);
+        IrisChatLib.sharedInstance().setHttpHeaders(this.httpHeaders);
+    }
+
+    removeHttpHeader(name: string): void {
+        this.httpHeaders.removeObjectForKey(name);
+        IrisChatLib.sharedInstance().setHttpHeaders(this.httpHeaders)
+    }
+
     enableSslPinning(listener: ParleySslPinningListener, publicKeyOne: string, publicKeyTwo: string): void {
         this.setSslPinningListener(listener);
         this.sslPinningPublicKeyOne = publicKeyOne;
@@ -32,12 +42,13 @@ export class Parley extends ParleyBase {
         IrisChatLib.sharedInstance().toolbarEnabled = false;
 
         if (this.sslPinningPublicKeyOne && this.sslPinningPublicKeyTwo) {
-            IrisChatLib.initIrisChatLibraryWithSecretAndBaseUrlAndSslPinningKeyOneAndSslPinningKeyTwoAndSsLPinningErrorMessage(
+            IrisChatLib.initIrisChatLibraryWithSecretAndBaseUrlAndSslPinningKeyOneAndSslPinningKeyTwoAndSsLPinningErrorMessageAndHttpHeaders(
                 this.appSecret,
                 this.baseUrl,
                 this.sslPinningPublicKeyOne,
                 this.sslPinningPublicKeyTwo,
-                "Unsafe connection detected, the chat will be closed."
+                "Unsafe connection detected, the chat will be closed.",
+                this.httpHeaders
             );
         } else {
             // Also support not providing baseurl and pinning

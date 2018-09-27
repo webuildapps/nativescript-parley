@@ -24,6 +24,8 @@ declare module com {
                 public unRegisterUser(param0: string): void;
                 public handlePushMessageSilent(param0: java.util.Map<String, String>): void;
                 public setToolbarEnabled(param0: java.lang.Boolean): void;
+                public addHttpHeader(name: string, value: string): void;
+                public removeHttpHeader(name: string): void;
             }
             export module Parley {
                 export class ParleyListener {

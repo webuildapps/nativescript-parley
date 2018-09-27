@@ -8,14 +8,17 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ## Changes
 
-### V1.0.15 (21 august 2018)
- * PARLEY-202 Supporting transparent background
- * PARLEY-202 Added gradient background in the demo app
+### V1.1.0 (27 September 2018)
+ * PARLEY-205 Added support for using custom headers.
 
-### V1.0.12 (15 may 2018)
+### V1.0.15 (21 August 2018)
+ * PARLEY-202 Supporting transparent background.
+ * PARLEY-202 Added gradient background in the demo app.
+
+### V1.0.12 (15 May 2018)
  * PARLEY-187 Disabled tool- and navigationbar manipulation.
  
-### V1.0.0 (23 april 2018)
+### V1.0.0 (23 April 2018)
  * PARLEY-179 Release on GitHub and npm.
 
 ## Getting started
@@ -379,6 +382,16 @@ Parley.getInstance().enableSslPinning(this , "N9YyJf13LbHgGv1kn9/YEXGFLJbleikrcp
 Parley.getInstance().configure();
 ```
 *(The values shown are the default values, modify them to your needs)*
+
+### Custom headers
+Parley supports the use of custom headers. These can be updated before and after configuring the instance.
+
+*Note that Parley will override values in case the header has the same name. Also, the headers of Parley cannot be removed via this method.* 
+ 
+```typescript
+Parley.getInstance().addHttpHeader("custom-company", "Webuildapps");
+Parley.getInstance().removeHttpHeader("custom-company");
+```
 
 #### Enable SSL pinning
 To enable SSL pinning you must have a security config.

@@ -36,6 +36,14 @@ export class Parley extends ParleyBase {
         ParleyNative.getInstance().setToolbarEnabled(new java.lang.Boolean(false));
     }
 
+    addHttpHeader(name: string, value: string): void {
+        ParleyNative.getInstance().addHttpHeader(name, value);
+    }
+
+    removeHttpHeader(name: string): void {
+        ParleyNative.getInstance().removeHttpHeader(name);
+    }
+
     enableSslPinning(listener: ParleySslPinningListener, publicKeyOne: string, publicKeyTwo: string): void {
         // Values not needed for Android, those are defined in the xml, which is referred to via the manifest.
         // Thus: ignoring the key values
