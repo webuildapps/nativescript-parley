@@ -17,6 +17,8 @@ declare module com {
                 public constructor();
                 public static getInstance(): com.webuildapps.parleylib.Parley;
                 public static init(param0: android.content.Context, param1: com.webuildapps.parleylib.Parley.ParleyListener, param2: string, param3: boolean): void;
+                public setBaseUrl(baseUrl: string): void;
+                public setBasePath(basePath: string): void;
                 public enableSslPinning(param0: android.content.Context, param1: com.webuildapps.parleylib.Parley.ParleySslPinningListener, param2: any): void;
                 public configure(param0: android.content.Context): void;
                 public registerDevice(param0: string): void;

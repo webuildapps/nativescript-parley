@@ -5,6 +5,7 @@ export class Parley extends ParleyBase {
 
     private static instance: Parley;
     private appSecret: string;
+    private baseUrl: string;
     private sslPinningPublicKeyOne: string;
     private sslPinningPublicKeyTwo: string;
     private httpHeaders = NSMutableDictionary.dictionary();
@@ -20,6 +21,15 @@ export class Parley extends ParleyBase {
     static init(listener: ParleyListener, appSecret: string): void {
         Parley.getInstance().appSecret = appSecret;
         Parley.getInstance().setListener(listener);
+    }
+
+    setBaseUrl(baseUrl: string): void {
+        this.baseUrl = baseUrl;
+        IrisChatLib.sharedInstance().setBaseUrl(this.baseUrl);
+    }
+
+    setBasePath(basePath: string): void {
+        IrisChatLib.sharedInstance().setBasePath(basePath);
     }
 
     addHttpHeader(name: string, value: string): void {
@@ -44,14 +54,14 @@ export class Parley extends ParleyBase {
         if (this.sslPinningPublicKeyOne && this.sslPinningPublicKeyTwo) {
             IrisChatLib.initIrisChatLibraryWithSecretAndBaseUrlAndSslPinningKeyOneAndSslPinningKeyTwoAndSsLPinningErrorMessageAndHttpHeaders(
                 this.appSecret,
-                this.baseUrl,
+                this.baseUrl || Parley.DEFAULT_BASE_URL,
                 this.sslPinningPublicKeyOne,
                 this.sslPinningPublicKeyTwo,
                 "Unsafe connection detected, the chat will be closed.",
                 this.httpHeaders
             );
         } else {
-            // Also support not providing baseurl and pinning
+            // Also support not providing pinning
             IrisChatLib.initIrisChatLibraryWithSecret(this.appSecret);
         }
     }

@@ -36,6 +36,14 @@ export class Parley extends ParleyBase {
         ParleyNative.getInstance().setToolbarEnabled(new java.lang.Boolean(false));
     }
 
+    setBaseUrl(baseUrl: string): void {
+        ParleyNative.getInstance().setBaseUrl(baseUrl);
+    }
+
+    setBasePath(basePath: string): void {
+        ParleyNative.getInstance().setBasePath(basePath);
+    }
+
     addHttpHeader(name: string, value: string): void {
         ParleyNative.getInstance().addHttpHeader(name, value);
     }

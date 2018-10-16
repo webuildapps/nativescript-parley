@@ -8,6 +8,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ## Changes
 
+### V1.1.1 (16 October 2018)
+ * PARLEY-206 Configuring the base url and path is now working correctly.
+
 ### V1.1.0 (27 September 2018)
  * PARLEY-205 Added support for using custom headers.
 

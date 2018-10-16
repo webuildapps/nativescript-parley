@@ -6,20 +6,10 @@ export abstract class ParleyBase implements Parley {
     public static DEFAULT_BASE_URL = 'https://www.irischat.com';
 
     protected deviceToken: string;
-    protected baseUrl = ParleyBase.DEFAULT_BASE_URL;
-    protected basePath = '/clientApi/v1.1/';
     protected offlineMessagingEnabled = false;
 
     private listener: ParleyListener;
     private sslPinningListener: ParleySslPinningListener;
-
-    setBaseUrl(baseUrl: string): void {
-        this.baseUrl = baseUrl;
-    }
-
-    setBasePath(basePath: string): void {
-        this.basePath = basePath;
-    }
 
     setOfflineMessagingEnabled(offlineMessagingEnabled: boolean): void {
         this.offlineMessagingEnabled = offlineMessagingEnabled;
@@ -29,6 +19,10 @@ export abstract class ParleyBase implements Parley {
         let formattedDeviceToken = deviceToken.replace(/[<> ]?/g, "");
         this.deviceToken = formattedDeviceToken;
     }
+
+    abstract setBaseUrl(baseUrl: string): void;
+
+    abstract setBasePath(basePath: string): void;
 
     abstract addHttpHeader(name: string, value: string): void;
 
