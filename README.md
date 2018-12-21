@@ -8,6 +8,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ## Changes
 
+### V1.1.3 (21 December 2018)
+ * PARLEY-215 Bugfix for using the library without SSL-pinning.
+
 ### V1.1.2 (4 December 2018)
  * PARLEY-209 Changed polling interval to 20 seconds (polling is only used when push is off or disabled).
 
