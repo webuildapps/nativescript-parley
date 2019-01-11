@@ -85,7 +85,8 @@ export class Parley extends ParleyBase {
             }
         }
 
-        ParleyNative.getInstance().handlePushMessageSilent(pushMessageMap);
+        let intent = new android.content.Intent();
+        ParleyNative.getInstance().handlePushMessage(app.android.context, pushMessageMap, intent);
     }
 }
 

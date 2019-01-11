@@ -8,6 +8,10 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ## Changes
 
+
+### V1.1.4 (11 January 2018)
+ * PARLEY-223 Bugfix for push messages when app is in background.
+
 ### V1.1.3 (21 December 2018)
  * PARLEY-215 Bugfix for using the library without SSL-pinning.
 
@@ -386,7 +390,7 @@ The available configuration methods are as follows:
 Parley.init(this, "0W4qcE5aXoKq9OzvHxj2");
 Parley.getInstance().registerUser("ZGFhbnw5ZTA5ZjQ2NWMyMGNjYThiYjMxNzZiYjBhOTZmZDNhNWY0YzVlZjYzMGVhNGZmMWUwMjFjZmE0NTEyYjlmMDQwYTJkMTJmNTQwYTE1YmUwYWU2YTZjNTc4NjNjN2IxMmRjODNhNmU1ODNhODhkMmQwNzY2MGYxZTEzZDVhNDk1Mnw1ZDcwZjM5ZTFlZWE5MTM2YmM3MmIwMzk4ZDcyZjEwNDJkNzUwOTBmZmJjNDM3OTg5ZWU1MzE5MzdlZDlkYmFmNTU1YTcyNTUyZWEyNjllYmI5Yzg5ZDgyZGQ3MDYwYTRjZGYxMzE3NWJkNTUwOGRhZDRmMDA1MTEzNjlkYjkxNQ"); // Optional -- Read the user registration custom configuration!
 Parley.getInstance().setBaseUrl("https://www.irischat.com"); // Optional
-Parley.getInstance().setBasePath("/clientApi/v1.1/"); // Optional
+Parley.getInstance().setBasePath("/clientApi/v1.2/"); // Optional
 Parley.getInstance().enableSslPinning(this , "N9YyJf13LbHgGv1kn9/YEXGFLJbleikrcpDORa896ok=", "aR6DUqN8qK4HQGhBpcDLVnkRAvOHH1behpQUU1Xl7fE="); // Optional -- Read the SSL pinning custom configuration!
 Parley.getInstance().configure();
 ```
