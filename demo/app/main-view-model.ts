@@ -15,7 +15,7 @@ export class MainViewModel extends Observable implements ParleyListener, ParleyS
         // Parley.getInstance().removeHttpHeader("custom-company");
         Parley.getInstance().registerUser("ZGFhbnw5ZTA5ZjQ2NWMyMGNjYThiYjMxNzZiYjBhOTZmZDNhNWY0YzVlZjYzMGVhNGZmMWUwMjFjZmE0NTEyYjlmMDQwYTJkMTJmNTQwYTE1YmUwYWU2YTZjNTc4NjNjN2IxMmRjODNhNmU1ODNhODhkMmQwNzY2MGYxZTEzZDVhNDk1Mnw1ZDcwZjM5ZTFlZWE5MTM2YmM3MmIwMzk4ZDcyZjEwNDJkNzUwOTBmZmJjNDM3OTg5ZWU1MzE5MzdlZDlkYmFmNTU1YTcyNTUyZWEyNjllYmI5Yzg5ZDgyZGQ3MDYwYTRjZGYxMzE3NWJkNTUwOGRhZDRmMDA1MTEzNjlkYjkxNQ"); // Optional
         Parley.getInstance().setBaseUrl("https://www.irischat.com"); // Optional
-        Parley.getInstance().setBasePath("/clientApi/v1.1/"); // Optional
+        Parley.getInstance().setBasePath("/clientApi/v1.2/"); // Optional
         Parley.getInstance().enableSslPinning(this, "9sKYVo1QaNw+PltWM+2OAI8sMfe5L+IHSc54ZnpNCIw=", "S0mHTmqv2QhJEfy5vyPVERSnyMEliJzdC8RXduOjhAs="); // Optional
         Parley.getInstance().configure();
 

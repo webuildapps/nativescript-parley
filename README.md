@@ -8,6 +8,10 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ## Changes
 
+### V1.2.0 (22 January 2018)
+ * PARLEY-219 Added support for sticky messages.
+ * PARLEY-216 Added a new balloon style.
+ * PARLEY-224 Better backwards compatibility for messages.
 
 ### V1.1.4 (11 January 2018)
  * PARLEY-223 Bugfix for push messages when app is in background.
