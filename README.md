@@ -8,6 +8,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ## Changes
 
+### V1.2.2 (23 January 2018)
+ * PARLEY-228 The Android activity that should be opened via push messages can now be set by using `Parley.getInstance().setNotificationTarget(notificationTarget: string)`
+
 ### V1.2.1 (23 January 2018)
  * PARLEY-227 Compatibility fixes for Android API 18.
 
@@ -228,6 +231,9 @@ firebase.init({
     onMessageReceivedCallback: (message: Message) => {
         console.log("onMessageReceivedCallback: ", message.data);
 
+        // Optional: Set the target activity to open when the notification is being clicked
+        Parley.getInstance().setNotificationTarget("com.webuildapps.tracebuzz.parleydemo.MainActivity"); 
+       
         Parley.getInstance().handlePushMessage(message.data);
     },
 

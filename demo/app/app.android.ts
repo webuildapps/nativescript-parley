@@ -8,6 +8,7 @@ firebase.init({
     onMessageReceivedCallback: (message: Message) => {
         console.log("onMessageReceivedCallback: ", message.data);
 
+        Parley.getInstance().setNotificationTarget("com.webuildapps.tracebuzz.parleydemo.MainActivity");
         Parley.getInstance().handlePushMessage(message.data);
     },
 

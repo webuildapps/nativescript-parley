@@ -17,6 +17,7 @@ export declare class Parley {
     registerDevice(): void;
     registerUser(userAuthorization: string): void;
     deregisterUser(): void;
+    setNotificationTarget(notificationTarget: string): void;
     handlePushMessage(pushMessage: any): void;
 }
 

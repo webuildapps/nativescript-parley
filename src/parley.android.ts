@@ -86,6 +86,10 @@ export class Parley extends ParleyBase {
         }
 
         let intent = new android.content.Intent();
+        intent.setFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK | android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        if (this.notificationTarget) {
+            intent.setClassName(app.android.context, this.notificationTarget);
+        }
         ParleyNative.getInstance().handlePushMessage(app.android.context, pushMessageMap, intent);
     }
 }

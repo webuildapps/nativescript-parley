@@ -7,6 +7,7 @@ export abstract class ParleyBase implements Parley {
 
     protected deviceToken: string;
     protected offlineMessagingEnabled = false;
+    protected notificationTarget: string;
 
     private listener: ParleyListener;
     private sslPinningListener: ParleySslPinningListener;
@@ -39,6 +40,10 @@ export abstract class ParleyBase implements Parley {
     abstract deregisterUser(): void;
 
     abstract handlePushMessage(pushMessage: any): void;
+
+    setNotificationTarget(notificationTarget: string): void {
+        this.notificationTarget = notificationTarget;
+    }
 
     setListener(listener: ParleyListener): void {
         this.listener = listener;
