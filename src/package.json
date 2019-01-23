@@ -1,6 +1,6 @@
 {
   "name": "nativescript-parley",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "NativeScript plugin for Parley messaging.",
   "main": "parley",
   "typings": "parley.d.ts",
