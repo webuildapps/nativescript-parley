@@ -7,6 +7,8 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.3 (31 January 2018)
+- PARLEY-223 Fixed dots for is typing functionality not being colored for Android.
 
 ### V1.2.2 (23 January 2018)
  * PARLEY-228 The Android activity that should be opened via push messages can now be set by using `Parley.getInstance().setNotificationTarget(notificationTarget: string)`
