@@ -7,6 +7,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.4 (1 February 2018)
+- PARLEY-228 Changed intent flags for Android push notifications.
+
 ### V1.2.3 (31 January 2018)
 - PARLEY-223 Fixed dots for is typing functionality not being colored for Android.
 
