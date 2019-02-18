@@ -7,24 +7,27 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
-### V1.2.4 (1 February 2018)
+### V1.2.5 (18 February 2019)
+PARLEY-231: Fix push enabled check always being true when background app refresh is on.
+
+### V1.2.4 (1 February 2019)
 - PARLEY-228 Changed intent flags for Android push notifications.
 
-### V1.2.3 (31 January 2018)
+### V1.2.3 (31 January 2019)
 - PARLEY-223 Fixed dots for is typing functionality not being colored for Android.
 
-### V1.2.2 (23 January 2018)
+### V1.2.2 (23 January 2019)
  * PARLEY-228 The Android activity that should be opened via push messages can now be set by using `Parley.getInstance().setNotificationTarget(notificationTarget: string)`
 
-### V1.2.1 (23 January 2018)
+### V1.2.1 (23 January 2019)
  * PARLEY-227 Compatibility fixes for Android API 18.
 
-### V1.2.0 (22 January 2018)
+### V1.2.0 (22 January 2019)
  * PARLEY-219 Added support for sticky messages.
  * PARLEY-216 Added a new balloon style.
  * PARLEY-224 Better backwards compatibility for messages.
 
-### V1.1.4 (11 January 2018)
+### V1.1.4 (11 January 2019)
  * PARLEY-223 Bugfix for push messages when app is in background.
 
 ### V1.1.3 (21 December 2018)
