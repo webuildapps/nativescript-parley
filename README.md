@@ -7,14 +7,17 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.6 (18 March 2019)
+ * PARLEY-232 Upgraded to NativeScript `5.2.2` and updated `README.MD` with instructions (Step 1.2.2) to bypass the `GoogleService-Info.plist` check by the `nativescript-plugin-firebase` package.
+
 ### V1.2.5 (18 February 2019)
-PARLEY-231: Fix push enabled check always being true when background app refresh is on.
+ * PARLEY-231 Fix push enabled check always being true when background app refresh is on.
 
 ### V1.2.4 (1 February 2019)
-- PARLEY-228 Changed intent flags for Android push notifications.
+ * PARLEY-228 Changed intent flags for Android push notifications.
 
 ### V1.2.3 (31 January 2019)
-- PARLEY-223 Fixed dots for is typing functionality not being colored for Android.
+ * PARLEY-223 Fixed dots for is typing functionality not being colored for Android.
 
 ### V1.2.2 (23 January 2019)
  * PARLEY-228 The Android activity that should be opened via push messages can now be set by using `Parley.getInstance().setNotificationTarget(notificationTarget: string)`
@@ -196,7 +199,20 @@ module.exports = function() {
 };
 ```
 
-#### Step 1.2.2: Configure Remote messages
+#### Step 1.2.2: Create `GoogleService-Info.plist` to bypass a check by the `nativescript-plugin-firebase` package.
+
+The NativeScript Firebase plugin checks by default if the file `GoogleService-Info.plists` exists. Firebase is not needed for iOS because Parley uses APNs to receive Remote Messages. To bypass this, create the file `App_Resources/iOS/GoogleService-Info.plist` with the following content:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+</dict>
+</plist>
+```
+
+#### Step 1.2.3: Configure Remote messages
 To receive remote messages in iOS the application needs to add an `app.entitlements` file.
 
 Create the file `app/App_Resources/iOS/app.entitlements` and add the following:
