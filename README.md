@@ -7,6 +7,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.7 (18 March 2019)
+ * PARLEY-233 Fix for keyboard accessory view in iOS.
+
 ### V1.2.6 (18 March 2019)
  * PARLEY-232 Upgraded to NativeScript `5.2.2` and updated `README.MD` with instructions (Step 1.2.2) to bypass the `GoogleService-Info.plist` check by the `nativescript-plugin-firebase` package.
 
