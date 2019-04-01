@@ -99,14 +99,15 @@ export class ParleyView extends ParleyViewBase {
     }
 
     showChat(): void {
-        let navigationViewController = ICChatViewController.new();
-        navigationViewController.view.frame = this.nativeView.frame;
+        let chatViewController = ICChatViewController.new();
+
+        let size = this.nativeView.frame.size;
+        chatViewController.view.frame = CGRectMake(0,0, size.width, size.height);
 
         let parentViewController = this.page.viewController;
-
-        parentViewController.addChildViewController(navigationViewController);
-        this.nativeView.addSubview(navigationViewController.view);
-        navigationViewController.didMoveToParentViewController(parentViewController);
+        parentViewController.addChildViewController(chatViewController);
+        this.nativeView.addSubview(chatViewController.view);
+        chatViewController.didMoveToParentViewController(parentViewController);
     }
 }
 
