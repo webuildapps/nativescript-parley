@@ -7,11 +7,14 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.8 (1 April 2019)
+ * PARLEY-234 Removed `before-prepare` `remove-firebase-podfile.js` instructions.
+
 ### V1.2.7 (18 March 2019)
  * PARLEY-233 Fix for keyboard accessory view in iOS.
 
 ### V1.2.6 (18 March 2019)
- * PARLEY-232 Upgraded to NativeScript `5.2.2` and updated `README.MD` with instructions (Step 1.2.2) to bypass the `GoogleService-Info.plist` check by the `nativescript-plugin-firebase` package.
+ * PARLEY-232 Upgraded to NativeScript `5.2.2` and updated `README.MD` with instructions (Step 1.2.1) to bypass the `GoogleService-Info.plist` check by the `nativescript-plugin-firebase` package.
 
 ### V1.2.5 (18 February 2019)
  * PARLEY-231 Fix push enabled check always being true when background app refresh is on.
@@ -54,7 +57,7 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
 
 ### V1.0.12 (15 May 2018)
  * PARLEY-187 Disabled tool- and navigationbar manipulation.
- 
+
 ### V1.0.0 (23 April 2018)
  * PARLEY-179 Release on GitHub and npm.
 
@@ -185,24 +188,7 @@ Open the `AndroidManifest` (located in `App_Resources/Android/AndroidManifest.xm
 ```
 
 ### 1.2 iOS
-#### Step 1.2.1: Create a before-prepare hook to delete the Firebase podfile
-The NativeScript Firebase plugin adds a Podfile by default. Firebase is not needed for iOS because Parley uses APNs to receive Remote Messages. To bypass this create the file `hooks/before-prepare/remove-firebase-podfile.js` with the following content:
-
-```javascript
-let path = require('path');
-let fs = require('fs');
-
-module.exports = function() {
-    let podFile = path.join(__dirname, "..", "..", "node_modules", "nativescript-plugin-firebase", "platforms", "ios", "Podfile");
-    if (fs.existsSync(podFile)) {
-        console.log('Delete nativeScript Firebase plugin Podfile.', podFile);
-
-        fs.unlinkSync(podFile);
-    }
-};
-```
-
-#### Step 1.2.2: Create `GoogleService-Info.plist` to bypass a check by the `nativescript-plugin-firebase` package.
+#### Step 1.2.1: Create `GoogleService-Info.plist` to bypass a check by the `nativescript-plugin-firebase` package.
 
 The NativeScript Firebase plugin checks by default if the file `GoogleService-Info.plists` exists. Firebase is not needed for iOS because Parley uses APNs to receive Remote Messages. To bypass this, create the file `App_Resources/iOS/GoogleService-Info.plist` with the following content:
 
@@ -215,7 +201,7 @@ The NativeScript Firebase plugin checks by default if the file `GoogleService-In
 </plist>
 ```
 
-#### Step 1.2.3: Configure Remote messages
+#### Step 1.2.2: Configure Remote messages
 To receive remote messages in iOS the application needs to add an `app.entitlements` file.
 
 Create the file `app/App_Resources/iOS/app.entitlements` and add the following:
@@ -259,8 +245,8 @@ firebase.init({
         console.log("onMessageReceivedCallback: ", message.data);
 
         // Optional: Set the target activity to open when the notification is being clicked
-        Parley.getInstance().setNotificationTarget("com.webuildapps.tracebuzz.parleydemo.MainActivity"); 
-       
+        Parley.getInstance().setNotificationTarget("com.webuildapps.tracebuzz.parleydemo.MainActivity");
+
         Parley.getInstance().handlePushMessage(message.data);
     },
 
@@ -439,8 +425,8 @@ Parley.getInstance().configure();
 ### Custom headers
 Parley supports the use of custom headers. These can be updated before and after configuring the instance.
 
-*Note that Parley will override values in case the header has the same name. Also, the headers of Parley cannot be removed via this method.* 
- 
+*Note that Parley will override values in case the header has the same name. Also, the headers of Parley cannot be removed via this method.*
+
 ```typescript
 Parley.getInstance().addHttpHeader("custom-company", "Webuildapps");
 Parley.getInstance().removeHttpHeader("custom-company");
