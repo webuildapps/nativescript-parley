@@ -7,9 +7,12 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.9 (24 April 2019)
+ * PARLEY-240 Updated Android and iOS dependency
+
 ### V1.2.8 (1 April 2019)
  * PARLEY-234 Removed `before-prepare` `remove-firebase-podfile.js` instructions.
- * PARLEY-234 Margin top issue fixed
+ * PARLEY-234 Margin top issue fixed.
 
 ### V1.2.7 (18 March 2019)
  * PARLEY-233 Fix for keyboard accessory view in iOS.
