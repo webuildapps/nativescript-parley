@@ -39,7 +39,7 @@ export class Parley extends ParleyBase {
 
     removeHttpHeader(name: string): void {
         this.httpHeaders.removeObjectForKey(name);
-        IrisChatLib.sharedInstance().setHttpHeaders(this.httpHeaders)
+        IrisChatLib.sharedInstance().setHttpHeaders(this.httpHeaders);
     }
 
     enableSslPinning(listener: ParleySslPinningListener, publicKeyOne: string, publicKeyTwo: string): void {
@@ -133,7 +133,7 @@ class ParleyLibDelegate extends UIResponder implements IrisChatLibDelegate {
         }
     }
 
-    irisChatLibFailedToStartWithError(irisChatLib: IrisChatLib, error: NSError): void {
+    irisChatLibFailedToStartWithError?(irisChatLib: IrisChatLib, error: NSError): void {
         // console.log("irisChatLibFailedToStartWithError");
 
         if (Parley.getInstance().getListener()) {
@@ -141,7 +141,7 @@ class ParleyLibDelegate extends UIResponder implements IrisChatLibDelegate {
         }
     }
 
-    irisChatLibFailedToSubscribeDeviceWithError(irisChatLib: IrisChatLib, error: NSError): void {
+    irisChatLibFailedToSubscribeDeviceWithError?(irisChatLib: IrisChatLib, error: NSError): void {
         // console.log("irisChatLibFailedToSubscribeDeviceWithError");
 
         if (Parley.getInstance().getListener()) {
@@ -149,7 +149,7 @@ class ParleyLibDelegate extends UIResponder implements IrisChatLibDelegate {
         }
     }
 
-    irisChatLibFailedToVerifySSLPin(irisChatLib: IrisChatLib, error: NSError): void {
+    irisChatLibFailedToVerifySSLPin?(irisChatLib: IrisChatLib, error: NSError): void {
         // console.log("irisChatLibFailedToVerifySSLPin");
 
         if (Parley.getInstance().getSslPinningListener()) {
@@ -157,7 +157,7 @@ class ParleyLibDelegate extends UIResponder implements IrisChatLibDelegate {
         }
     }
 
-    userDidSentMessage(): void {
+    userDidSentMessage?(): void {
         // console.log("userDidSentMessage");
 
         if (Parley.getInstance().getListener()) {
@@ -165,7 +165,7 @@ class ParleyLibDelegate extends UIResponder implements IrisChatLibDelegate {
         }
     }
 
-    userIsNotAuthorized(): void {
+    userIsNotAuthorized?(): void {
         // console.log("userIsNotAuthorized");
 
         if (Parley.getInstance().getListener()) {

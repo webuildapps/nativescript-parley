@@ -7,6 +7,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.11 (24 May 2019)
+ * PARLEY-245 Updated demo and iOS dependency.
+
 ### V1.2.10 (24 April 2019)
  * PARLEY-240 Updated Android and iOS dependency.
 
