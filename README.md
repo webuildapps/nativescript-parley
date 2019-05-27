@@ -7,6 +7,9 @@ NativeScript plugin for Parley messaging. You need an `appSecret` to use this pl
  - NativeScript 4.0.0
 
 ## Changes
+### V1.2.12 (27 May 2019)
+ * PARLEY-246 Updated Android dependency for adding custom headers when loading images.
+ 
 ### V1.2.11 (24 May 2019)
  * PARLEY-245 Updated demo and iOS dependency.
 
