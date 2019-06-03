@@ -3,4 +3,4 @@ source 'https://webuildapps@bitbucket.org/webuildapps/wba_cocoapod_spec_repo.git
 
 use_frameworks!
 inhibit_all_warnings!
-pod 'IrisChatLibrary', '1.4.5'
+pod 'IrisChatLibrary', '1.4.6'
